@@ -1,9 +1,18 @@
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Passwords primerpass = new Passwords();
+        Passwords primera=new Passwords();
+        int largo =8;
+        String entradai=JOptionPane.showInputDialog("Ingrese la longitud del pasword: ");
+        if (entradai != null && !(entradai.isEmpty()) ){
+            largo=Integer.parseInt(entradai);
+        }
+        String contra= primera.Generador(largo);
 
-        primerpass.ingresolongitud();
+              JOptionPane.showMessageDialog(null, "La password es:  "+ contra);
+
+        primera.seguridad(contra);
 
 
     }
