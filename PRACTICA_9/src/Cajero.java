@@ -2,25 +2,17 @@ import javax.swing.*;
 
 public class Cajero {
 
-    public int numerocuenta;
-    public String nombretitular;
-    public int edad;
-    public int saldoincial;
+   private  int numerocuenta;
+   private  String nombretitular;
+    private  int edad;
+    private int saldoincial;
 
-
-        public void pedirdatos(){
-
-            numerocuenta=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de cuenta"));
-            nombretitular=JOptionPane.showInputDialog("Ingrese el nombre del cuenta");
-            edad=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el edad"));
-            saldoincial=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el saldo"));
-            if (saldoincial<0){
-                JOptionPane.showMessageDialog(null,"El saldo no puede ser negativo");
-            } else {
-                JOptionPane.showMessageDialog(null,"Sus datos son: "+"\n"+"numero de cuenta: "+numerocuenta + "\n" + "Nombre de titular: "+nombretitular + "\n"+
-                        "edad: "+edad + "\n" + "Saldo: "+saldoincial);
-            }
-        }
+    public Cajero(int numerocuenta, String nombretitular, int edad, int saldoincial) {
+        this.numerocuenta = numerocuenta;
+        this.nombretitular = nombretitular;
+        this.edad = edad;
+        this.saldoincial = saldoincial;
+    }
 
         public void ingresarefectivo(){
             int ingreso=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese la cantidad que deseas ingresar: "));
@@ -46,6 +38,38 @@ public class Cajero {
 
 
         }
+
+    public String getNombretitular() {
+        return nombretitular;
+    }
+
+    public void setNombretitular(String nombretitular) {
+        this.nombretitular = nombretitular;
+    }
+
+    public int getSaldoincial() {
+        return saldoincial;
+    }
+
+    public void setSaldoincial(int saldoincial) {
+        this.saldoincial = saldoincial;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getNumerocuenta() {
+        return numerocuenta;
+    }
+
+    public void setNumerocuenta(int numerocuenta) {
+        this.numerocuenta = numerocuenta;
+    }
 
 
 }
