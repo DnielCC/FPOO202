@@ -1,9 +1,17 @@
     import java.util.Random;
     import javax.swing.*;
+
     public class Passwords {
-        public String maylet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        public String minlet = "abcdefghijklmnopqrst1234567890";
-        public String especial = "@+*#%<>-!";
+        private String maylet  ;
+        private String minlet ;
+        private String especial;
+
+        public Passwords(String maylet, String especial, String minlet) {
+            this.maylet = maylet;
+            this.especial = especial;
+            this.minlet = minlet;
+        }
+
 
         public String Generador(int length) {
             int mayusc = JOptionPane.showConfirmDialog(null, "Desea que su password tenga letras mayusculas?", "Pregunta", JOptionPane.YES_NO_OPTION);
@@ -52,5 +60,28 @@
             }
 
 
+        }
+        public String getMinlet() {
+            return minlet;
+        }
+
+        public void setMinlet(String minlet) {
+            this.minlet = minlet;
+        }
+
+        public String getMaylet() {
+            return maylet;
+        }
+
+        public void setMaylet(String maylet) {
+            this.maylet = maylet;
+        }
+
+        public String getEspecial() {
+            return especial;
+        }
+
+        public void setEspecial(String especial) {
+            this.especial = especial;
         }
     }
