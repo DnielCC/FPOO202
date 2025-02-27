@@ -13,7 +13,7 @@ public class Cajero {
         this.edad = edad;
         this.saldoincial = saldoincial;
     }
-
+    
         public void ingresarefectivo(){
             int ingreso=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese la cantidad que deseas ingresar: "));
             int saldoactual= saldoincial+ingreso;
