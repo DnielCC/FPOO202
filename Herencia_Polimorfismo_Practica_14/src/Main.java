@@ -2,14 +2,27 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        SpartanII jefemaestro = new SpartanII("jhon",90,"rifle de asalto",0);
+        jefemaestro.mostrarInfo();
+        jefemaestro.usarManejoAvanzado();
+        jefemaestro.atacar("Covenant");
+        jefemaestro.recibirDano(50);
+        jefemaestro.recargarEscudo();
+
+        SpartanIII Skywalker =new SpartanIII("Luke",100,"Sable lazer",0);
+        Skywalker.mostrarInfo();
+        Skywalker.camuflajeActivo();
+        Skywalker.atacar("Palpatin");
+        Skywalker.recibirDano(50);
+        Skywalker.recargarEscudo();
+
+        SpartanIV Ren =new SpartanIV("Kylo",120,"Sable lazer T",0);
+        Ren.mostrarInfo();
+        Ren.usarPropulsores();
+        Ren.atacar("Palpatin");
+        Ren.recibirDano(50);
+        Ren.recargarEscudo();
+
     }
 }
